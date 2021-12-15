@@ -13,9 +13,9 @@ def main():
     generate_for_startpage(urls)
 
 
-def header() -> List[AnyStr]:
+def header(name: str) -> List[AnyStr]:
     return [
-        '! Title: Search Blacklist',
+        f'! Title: Search Blacklist - {name}',
         f'! Updated: {datetime.now().strftime("%a, %d %b %Y %H:%M:%S %z")}',
         '! Expires: 1 day (update frequency)',
         '! Homepage: https://github.com/tdbits/ublock-search-blacklist',
@@ -34,7 +34,7 @@ def generate_for_google(urls: List[AnyStr]) -> List[AnyStr]:
     blacklist = map(lambda url: f'google.*##.g:has(a[href*="{url}"])', urls)
 
     with open('google.txt', 'w') as blacklist_file:
-        blacklist_file.write('\n'.join(header()))
+        blacklist_file.write('\n'.join(header('Google')))
         blacklist_file.write('\n')
         blacklist_file.write('\n'.join(blacklist))
 
@@ -43,7 +43,7 @@ def generate_for_startpage(urls: List[AnyStr]) -> List[AnyStr]:
     blacklist = map(lambda url: f'startpage.*##.w-gl__result:has(a[href*="{url}"])', urls)
 
     with open('startpage.txt', 'w') as blacklist_file:
-        blacklist_file.write('\n'.join(header()))
+        blacklist_file.write('\n'.join(header('Startpage')))
         blacklist_file.write('\n')
         blacklist_file.write('\n'.join(blacklist))
 
