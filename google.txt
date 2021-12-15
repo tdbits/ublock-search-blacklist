@@ -1,3 +1,8 @@
+! Title: Search Blacklist
+! Updated: Wed, 15 Dec 2021 21:59:21 
+! Expires: 1 day (update frequency)
+! Homepage: https://github.com/tdbits/ublock-search-blacklist
+! License: https://github.com/tdbits/ublock-search-blacklist/blob/main/LICENSE
 google.*##.g:has(a[href*="bleepcoder.com"])
 google.*##.g:has(a[href*="githubja.com"])
 google.*##.g:has(a[href*="gitmemory.com"])
