@@ -1,5 +1,5 @@
-! Title: Search Blacklist
-! Updated: Wed, 15 Dec 2021 21:59:21 
+! Title: Search Blacklist - Google
+! Updated: Wed, 15 Dec 2021 22:05:15 
 ! Expires: 1 day (update frequency)
 ! Homepage: https://github.com/tdbits/ublock-search-blacklist
 ! License: https://github.com/tdbits/ublock-search-blacklist/blob/main/LICENSE
